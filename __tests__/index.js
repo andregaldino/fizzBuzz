@@ -1,5 +1,7 @@
 import FizzBuzz from '../src'
-describe('fizzBuzz', () => {
+import mock from '../src/mock'
+
+describe('must test multiple of 3 or 5', () => {
   test('when input is 3 must return fizz', () => {
     const fizz = new FizzBuzz()
     const result = fizz.run(3)
@@ -22,5 +24,15 @@ describe('fizzBuzz', () => {
     const fizz = new FizzBuzz()
     const result = fizz.run(8)
     expect(result).toBe(8)
+  })
+
+  test('fizz buzz from 1 to 1000', () => {
+    const fizz = new FizzBuzz()
+    const result = {}
+    for (let index = 1; index <= 1000; index++) {
+      result[index] = fizz.run(index)
+    }
+
+    expect(result).toEqual(mock)
   })
 })
