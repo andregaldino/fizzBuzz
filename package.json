@@ -4,7 +4,6 @@
   "description": "Projeto de Avaliacao - Fizz Buzz",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d lib",
     "test": "jest"
   },
   "repository": {
