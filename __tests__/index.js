@@ -17,4 +17,10 @@ describe('fizzBuzz', () => {
     const result = fizz.run(15)
     expect(result).toBe('FizzBuzz')
   })
+
+  test('when input is not multiple of 3 or 5 must return same number', () => {
+    const fizz = new FizzBuzz()
+    const result = fizz.run(8)
+    expect(result).toBe(8)
+  })
 })
